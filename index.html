@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./icon/fontawesome-free-6.7.1-web/css/all.min.css">
   </head>
   <body>
     <div class="background-overlay"></div>
@@ -30,8 +31,91 @@
       <div class="line"></div>
       <div class="line"></div>
     </div>
-    <h1 class="neon-text">Gaming Zone</h1>
+    <nav class="navbar fixed-top align-items-center shadow-sm nav-background ">
+      <div class="h-100 w-100 d-flex align-items-center justify-content-between">
+          <div class="logo-container">
+            <div class="nav-logo-size">
+              <img class="nav-logo" src="./images/logo-no-back.png" alt="logo">
+            </div>
+              <span class="collection">Collection</span>
+          </div>
+        <button
+          class="btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas-hamburger-meno"
+          aria-controls="offcanvasExample"
+        >
+        <i class="fa-solid fa-bars nav-menu"></i>
+        </button>
+      </div>
+      <div id="fs" class="searchbar-1 rounded-3">
+      </div>
+    </nav>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas-hamburger-meno"
+      aria-labelledby="offcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <a href="#" class="o-p-header" id="offcanvasLabel">
+          <i class="fa-regular fa-circle-user o-icons"></i>
+          ورود/ ثبت‌نام
+        </a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr class="o-hr" />
+      <div class="offcanvas-body">
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-table-cells-large o-icons"></i>
+          دسته‌بندی خدمات
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-notes-medical o-icons"></i>
+          ثبت سفارش
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-square-poll-horizontal o-icons"></i>
+          سفارش‌های من
+        </a>
+        <hr class="i-o-hr" />
+        <a href="#" class="o-p-body">
+          <i class="fa-regular fa-star o-icons"></i>
+          آچاره کلاب
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-regular fa-user o-icons"></i>
+          دعوت از دوستان
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-hammer o-icons"></i>
+          استخدام شدن
+        </a>
+        <hr class="i-o-hr" />
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-clipboard-list o-icons"></i>
+          شرایط و مقررات
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-regular fa-comments o-icons"></i>
+          انتقادات و پیشنهادات
+        </a>
+        <a href="#" class="o-p-body">
+          <i class="fa-solid fa-book-open o-icons"></i>
+          وبلاگ آچاره
+        </a>
+      </div>
+      <div class="g-o-line rounded"></div>
+    </div>
+    <h1 class="neon-text">Game Experience Collection</h1>
     <p class="sub-text">Get ready for an epic adventure!</p>
+    <p class="qus-text">Choose the game you want to play</p>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
