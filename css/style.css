@@ -394,6 +394,71 @@ body {
   text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
 }
 
+.main-section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  padding-top: 30px !important;
+  padding-right: 0 !important;
+  padding-bottom: 0px !important;
+  padding-left: 0 !important;
+  background-color: #1a1a1a;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+}
+
+.support-title {
+  color: #00ffff;
+  font-size: 30px;
+  margin-top: 0px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0px !important;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+}
+
+.support-text {
+  color: #00ffff;
+  font-size: 16px;
+  margin-top: 20px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0px !important;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+}
+
+.support-link {
+  width: 100px;
+  height: 38px;
+  font-size: 15px;
+  margin-top: 30px !important;
+  margin-right: 0 !important;
+  margin-bottom: 20px !important;
+  margin-left: 0px !important;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+  background-color: #000;
+  color: #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+#copy-message {
+  font-size: 14px;
+  color: #4caf50;
+  margin-bottom: 5px;
+  visibility: hidden;
+}
+
 @media (max-width: 768px) {
   .offcanvas {
     width: 100% !important;
