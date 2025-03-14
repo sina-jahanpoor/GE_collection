@@ -97,7 +97,7 @@ body {
   color: #00ffff;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
   text-align: center;
-  margin-top: 110px;
+  margin-top: 100px;
 }
 
 .sub-text {
@@ -107,6 +107,17 @@ body {
   margin-top: 1rem !important;
   margin-right: 0 !important;
   margin-bottom: 1.1rem !important;
+  margin-left: 0 !important;
+  text-align: center;
+}
+
+.slogan-taxt {
+  font-size: 1rem;
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  margin-top: 2rem !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
   margin-left: 0 !important;
   text-align: center;
 }
@@ -158,6 +169,11 @@ body {
   margin-left: 0 !important;
 }
 
+.o-p-header:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
 .offcanvas {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
@@ -175,11 +191,22 @@ body {
   padding-left: 0 !important;
 }
 
+.btn-close {
+  position: relative;
+}
+
 .xmark {
   color: #00ffff;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
   font-size: 30px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 2.5px;
+  left: 5.5px;
+}
+
+.xmark:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
 }
 
 .o-icons {
@@ -228,6 +255,11 @@ body {
   margin-right: 0 !important;
   margin-bottom: 20px !important;
   margin-left: 0 !important;
+}
+
+.o-p-body:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
 }
 
 .g-o-line {
@@ -285,9 +317,109 @@ body {
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
 }
 
+.main {
+  height: auto !important;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.games-buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.games {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 15px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+}
+
+.games-button {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.games-name {
+  color: #00ffff;
+  font-size: 18px;
+  margin-top: 27px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: -10px !important;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.name-hover1:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.name-hover-1:hover + .name-hover1 {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.name-hover2:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.name-hover-2:hover + .name-hover2 {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.name-hover3:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.name-hover-3:hover + .name-hover3 {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
 @media (max-width: 768px) {
   .offcanvas {
     width: 100% !important;
     border-radius: 0 !important;
+  }
+  .games-button {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .games-name {
+    color: #00ffff;
+    font-size: 12px;
+    margin-top: 27px !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: -10px !important;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+    cursor: pointer;
+  }
+  .games-buttons-container {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .games-buttons-container {
+    margin-top: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
