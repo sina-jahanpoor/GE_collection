@@ -150,7 +150,8 @@ body {
   display: block;
   text-decoration: none;
   font-size: 16px !important;
-  color: #21c7b1;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
   margin-top: 15px !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
@@ -158,7 +159,9 @@ body {
 }
 
 .offcanvas {
-  border-radius: 2rem !important;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background-color: #1a1a1a;
 }
 
 .offcanvas-header {
@@ -170,6 +173,13 @@ body {
   padding-right: 0 !important;
   padding-bottom: 0 !important;
   padding-left: 0 !important;
+}
+
+.xmark {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .o-icons {
@@ -187,6 +197,7 @@ body {
   margin-right: auto !important;
   margin-bottom: 20px !important;
   margin-left: auto !important;
+  color: #00ffff;
 }
 
 .i-o-hr {
@@ -196,6 +207,7 @@ body {
   margin-right: auto !important;
   margin-bottom: 24px !important;
   margin-left: auto !important;
+  color: #00ffff;
 }
 
 .offcanvas-body {
@@ -210,7 +222,8 @@ body {
   display: block;
   text-decoration: none;
   font-size: 16px !important;
-  color: #000;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
   margin-top: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 20px !important;
@@ -218,8 +231,9 @@ body {
 }
 
 .g-o-line {
-  background-color: #21c7b1;
-  height: 5px !important;
+  background-color: #00ffff;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  height: 3px !important;
   width: 50% !important;
   margin-top: 0 !important;
   margin-right: auto !important;
@@ -269,4 +283,11 @@ body {
   margin-bottom: 0 !important;
   margin-left: -10px !important;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+}
+
+@media (max-width: 768px) {
+  .offcanvas {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
 }/*# sourceMappingURL=style.css.map */

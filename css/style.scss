@@ -163,15 +163,26 @@ body {
   display: block;
   text-decoration: none;
   font-size: 16px !important;
-  color: #21c7b1;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
   @include margin(15px,0 ,0 ,0 );
 }
 .offcanvas{
-  border-radius: 2rem !important;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background-color: #1a1a1a;
 }
 .offcanvas-header{
   @include margin(15px,21px ,0 ,21px );
   @include padding(0,0 ,0 ,0 );
+}
+.xmark{
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 .o-icons{
   font-size: 18px !important;
@@ -180,10 +191,12 @@ body {
 .o-hr{
   @include size(1px,90%);
   @include margin(20px,auto,20px,auto);
+  color: #00ffff;
 }
 .i-o-hr{
   @include size(1px,100%);
   @include margin(24px,auto,24px,auto);
+  color: #00ffff;
 }
 .offcanvas-body{
   @include padding(0 ,21px ,0 ,21px );
@@ -193,12 +206,16 @@ body {
   display: block;
   text-decoration: none;
   font-size: 16px !important;
-  color: #000;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
   @include margin(0,0 ,20px ,0 );
 }
 .g-o-line{
-  background-color: #21c7b1;
-  @include size(5px,50%);
+  background-color: #00ffff;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
+  @include size(3px,50%);
   @include margin(0,auto,20px,auto);
 }
 .nav-background{
@@ -238,6 +255,13 @@ body {
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
   0 0 40px #00ffff, 0 0 80px #00ffff;
 }
+
 @media (max-width:992px){
 
+}
+@media (max-width:768px){
+  .offcanvas{
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
 }
