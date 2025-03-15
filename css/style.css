@@ -7,7 +7,6 @@
 body {
   font-family: "Arial", sans-serif;
   background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  min-height: 300vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +110,7 @@ body {
   text-align: center;
 }
 
-.slogan-taxt {
+.slogan-text {
   font-size: 1rem;
   color: #ff007f;
   text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
@@ -400,9 +399,9 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 50px !important;
-  margin-right: 0 !important;
+  margin-right: 10px !important;
   margin-bottom: 0 !important;
-  margin-left: 0 !important;
+  margin-left: 10px !important;
   padding-top: 30px !important;
   padding-right: 0 !important;
   padding-bottom: 0px !important;
@@ -411,6 +410,13 @@ body {
   width: 70%;
   border-radius: 20px;
   box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+}
+
+.enjoy-text {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  margin-left: 20px;
+  font-size: 20px;
 }
 
 .support-title {
@@ -459,6 +465,139 @@ body {
   visibility: hidden;
 }
 
+.main-section-2 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  padding-top: 30px !important;
+  padding-right: 10px !important;
+  padding-bottom: 0px !important;
+  padding-left: 10px !important;
+  background-color: #1a1a1a;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+}
+
+.game-history-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px !important;
+  margin-right: 0 !important;
+  margin-bottom: 15px !important;
+  margin-left: 0px !important;
+}
+
+.game-history-title {
+  color: #00ffff;
+  font-size: 30px;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+}
+
+.game-history-names {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+}
+
+.game-history {
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.icon-container i {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 0 30px #fff;
+  text-decoration: none;
+}
+
+.fa-linkedin-in:hover {
+  color: #4c98cf;
+  text-shadow: 0 0 50px #4c98cf;
+}
+
+.fa-internet-explorer:hover {
+  color: #4c98cf;
+  text-shadow: 0 0 50px #4c98cf;
+}
+
+.fa-paper-plane:hover {
+  color: #4c98cf;
+  text-shadow: 0 0 50px #4c98cf;
+}
+
+.fa-instagram:hover {
+  color: #d32e86;
+  text-shadow: 0 0 50px #d32e86;
+}
+
+.fa-x-twitter:hover {
+  color: #1ea1f2;
+  text-shadow: 0 0 50px #1ea1f2;
+}
+
+.fa-facebook-f:hover {
+  color: #4867aa;
+  text-shadow: 0 0 50px #4867aa;
+}
+
+.fa-discord:hover {
+  color: #4c98cf;
+  text-shadow: 0 0 50px #4c98cf;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
+  text-shadow: 0 0 50px #ff0000;
+}
+
+.footer {
+  width: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  margin-top: 50px;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.footer-frames {
+  width: 50%;
+}
+
+.footer-logo {
+  justify-content: start;
+}
+
+.social-medias {
+  color: #00ffff;
+  font-size: 24px;
+  margin-top: 25px;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+}
+
+.icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px !important;
+  padding-right: 25px !important;
+  padding-bottom: 0 !important;
+  padding-left: 25px !important;
+}
+
 @media (max-width: 768px) {
   .offcanvas {
     width: 100% !important;
@@ -481,6 +620,21 @@ body {
   }
   .games-buttons-container {
     margin-top: 20px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-frames {
+    width: 100%;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .enjoy-text {
+    text-align: center;
+  }
+  .social-medias {
+    margin-top: 0px !important;
   }
 }
 @media (max-width: 576px) {
