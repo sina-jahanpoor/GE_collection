@@ -40,7 +40,11 @@
       >
         <div class="logo-container">
           <div class="nav-logo-size">
-            <img class="nav-logo" src="./images/logo-no-back-blue.png" alt="logo" />
+            <img
+              class="nav-logo"
+              src="./images/logo-no-back-blue.png"
+              alt="logo"
+            />
           </div>
           <span class="collection">Collection</span>
         </div>
@@ -119,38 +123,66 @@
       </div>
       <div class="g-o-line rounded"></div>
     </div>
-    <main class="main">
+    <main id="main" class="main d-none">
       <h1 class="neon-text">Game Experience Collection</h1>
       <p class="sub-text">Get ready for an epic adventure!</p>
       <p class="qus-text">Choose the game you want to play</p>
       <div class="games-buttons-container">
         <div class="games">
           <img
+            id="dino-button-img"
             class="games-button name-hover-1"
             src="./images/dino-button-image.jpg"
             alt="games image"
           />
-          <p class="games-name name-hover1">Dino Run</p>
+          <p id="dino-button-text" class="games-name name-hover1">Dino Run</p>
         </div>
         <div class="games">
           <img
+            id="puzzle-button-img"
             class="games-button name-hover-2"
             src="./images/puzzle-button-image.jpg"
             alt="games image"
           />
-          <p class="games-name name-hover2">Puzzle</p>
+          <p id="puzzle-button-text" class="games-name name-hover2">Puzzle</p>
         </div>
         <div class="games">
           <img
+            id="snake-button-img"
             class="games-button name-hover-3"
             src="./images/snake-button-image.jpg"
             alt="games image"
           />
-          <p class="games-name name-hover3">Space Snake</p>
+          <p id="snake-button-text" class="games-name name-hover3">
+            Space Snake
+          </p>
         </div>
       </div>
       <p class="slogan-text">Escape Reality Enter Advanture</p>
     </main>
+    <section id="dino-run" class="dino-run">
+      <div class="win-lose-neon wln-1"></div>
+      <div class="win-lose-neon wln-2"></div>
+      <div class="win-lose-neon wln-3"></div>
+      <div class="win-lose-neon wln-4"></div>
+      <div class="back-button-container">
+        <h4 class="GE-name">Game Experience Collection</h4>
+        <button id="back-button" class="back-button">Main Menu</button>
+      </div>
+      <div class="game-container"></div>
+    </section>
+    <section id="puzzle" class="puzzle d-none">
+      <div class="back-button-container">
+        <h4 class="GE-name">Game Experience Collection</h4>
+        <button id="back-button" class="back-button">Main Menu</button>
+      </div>
+    </section>
+    <section id="space-snake" class="space-snake d-none">
+      <div class="back-button-container">
+        <h4 class="GE-name">Game Experience Collection</h4>
+        <button id="back-button" class="back-button">Main Menu</button>
+      </div>
+    </section>
     <section class="main-section-1">
       <p class="support-title">Support us</p>
       <p class="support-text">
@@ -195,13 +227,15 @@
       <div class="footer-frames">
         <div class="logo-container footer-logo">
           <div class="nav-logo-size">
-            <img class="nav-logo" src="./images/logo-no-back-blue.png" alt="logo" />
+            <img
+              class="nav-logo"
+              src="./images/logo-no-back-blue.png"
+              alt="logo"
+            />
           </div>
           <span class="collection">Collection</span>
         </div>
-        <p class="enjoy-text">
-          I hope you had an enjoyable time.
-        </p>
+        <p class="enjoy-text">I hope you had an enjoyable time.</p>
       </div>
       <div class="footer-frames">
         <h3 class="social-medias">Follow us</h3>

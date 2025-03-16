@@ -499,6 +499,34 @@ body {
   align-items: center;
   @include padding(20px,25px ,0 ,25px )
 }
+.back-button-container{
+  width: 100vw;
+  @include padding(0,15px , 0,15px );
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.GE-name{
+  font-weight: 600;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
+  text-align: center;
+  margin-bottom: 0;
+}
+.back-button{
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
+  background-color: #000;
+  color: #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
 @media (max-width: 992px) {
 }
 @media (max-width: 768px) {
