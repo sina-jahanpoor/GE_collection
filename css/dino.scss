@@ -1,0 +1,361 @@
+@font-face {
+  font-family: Minecraft;
+  src: url("../font/Minecraft.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 100vh;
+}
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent 50%);
+  animation: bg-shadow 10s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes bg-shadow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.back-to-main-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+.logo-container {
+  width: 110px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+.name {
+  color: #00ffff;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: -10px;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+    0 0 40px #00ffff, 0 0 80px #00ffff;
+}
+.back-to-main {
+  width: 100px;
+  height: 38px;
+  font-size: 15px;
+  margin-right: 20px;
+  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+    0 0 20px #00ffff, 0 0 25px #00ffff;
+  background-color: #000;
+  color: #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.game-effect {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.win-lose-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  box-shadow: 0 0 30px 5px #00ffff;
+  background-color: #00ffff;
+}
+.position-1 {
+  top: 30%;
+}
+.position-2 {
+  top: 70%;
+}
+.green-line {
+  animation: green-win 1.5s ease-in-out ;
+}
+.red-line {
+    animation: red-lose 1.5s ease-in-out ;
+  }
+@keyframes green-win {
+  0% {
+    box-shadow: 0 0 30px 5px #00ffff;
+    background-color: #00ffff;
+  }
+  20% {
+    box-shadow: 0 0 30px 5px #30e620;
+    background-color: #30e620;
+  }
+  80% {
+    box-shadow: 0 0 30px 5px #30e620;
+    background-color: #30e620;
+  }
+  100% {
+    box-shadow: 0 0 30px 5px #00ffff;
+    background-color: #00ffff;
+  }
+}
+@keyframes red-lose {
+    0% {
+      box-shadow: 0 0 30px 5px #00ffff;
+      background-color: #00ffff;
+    }
+    20% {
+      box-shadow: 0 0 30px 5px #e4273d;
+      background-color: #e4273d;
+    }
+    80% {
+      box-shadow: 0 0 30px 5px #e4273d;
+      background-color: #e4273d;
+    }
+    100% {
+      box-shadow: 0 0 30px 5px #00ffff;
+      background-color: #00ffff;
+    }
+  }
+.game-container {
+  width: 75%;
+  aspect-ratio: 2 / 1;
+  margin: 10px auto;
+  border: 1px solid;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../images/sky.png");
+  background-size: contain;
+  animation: bg-move 30s linear infinite;
+}
+
+@keyframes bg-move {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -50%;
+  }
+}
+
+.player {
+  width: 160px;
+  height: 86px;
+  /* border: 1px solid blue; */
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  background-image: url("../images/dino.gif");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.player.jump {
+  animation: jump 1.5s infinite;
+  background-image: url("../images/dino.png");
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  25% {
+    bottom: 200px;
+  }
+  40% {
+    bottom: 200px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+.obstacle {
+  width: 60px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  /* border: 1px solid red; */
+  animation: move 2s linear infinite;
+  background-image: url("../images/obstacle.png");
+  background-size: contain;
+}
+
+.obstacle-xs {
+  width: 30px;
+  height: 70px;
+}
+.obstacle-s {
+  width: 60px;
+  height: 80px;
+}
+.obstacle-m {
+  width: 90px;
+  height: 90px;
+}
+.obstacle-l {
+  width: 120px;
+  height: 120px;
+}
+
+@keyframes move {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+.score-card {
+  color: #fff;
+  font-family: Minecraft;
+  font-size: 50px;
+  margin: 20px;
+}
+
+.score-card span {
+  margin-right: 20px;
+}
+
+.restart-game {
+  visibility: hidden;
+  font-family: Minecraft;
+  background-color: #ffffffb8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  z-index: 2;
+}
+
+.restart-game.show {
+  visibility: visible;
+}
+
+.restart-game .content {
+  display: flex;
+}
+
+.restart-game .btn-reset-game {
+  border: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/restart.png");
+  background-size: contain;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.restart-game .text {
+  align-self: end;
+}
+
+.stop.game-container,
+.stop .obstacle {
+  animation-play-state: paused;
+}
+
+.stop .player {
+  background-image: url("../images/dino.png");
+}
+@media (max-width: 768px){
+    .player {
+        width: 80px;
+        height: 40px;
+        left: 5%;
+    }
+    .obstacle {
+        width: 30px;
+        height: 60px;
+    }
+    .obstacle-xs {
+        width: 30px;
+        height: 40px;
+      }
+      .obstacle-s {
+        width: 40px;
+        height: 50px;
+      }
+      .obstacle-m {
+        width: 60px;
+        height: 60px;
+      }
+      .obstacle-l {
+        width: 80px;
+        height: 80px;
+      }
+      .restart-game {
+        font-size: 20px;
+      }
+      .restart-game .btn-reset-game {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+      }
+      .score-card{
+        font-size:30px ;
+        margin: 10px;
+      }
+      @keyframes jump {
+        0% {
+            bottom: 0;
+          }
+        
+          25% {
+            bottom: 100px;
+          }
+          40% {
+            bottom: 100px;
+          }
+        
+          100% {
+            bottom: 0;
+          }
+      }
+}

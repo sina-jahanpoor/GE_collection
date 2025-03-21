@@ -144,11 +144,11 @@ body {
   width: 300%;
   height: 300%;
   background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent 50%);
-  animation: move 10s linear infinite;
+  animation: bg-shadow 10s linear infinite;
   transform-origin: center;
 }
 
-@keyframes move {
+@keyframes bg-shadow {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
@@ -363,36 +363,6 @@ body {
   white-space: nowrap;
 }
 
-.name-hover1:hover {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
-.name-hover-1:hover + .name-hover1 {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
-.name-hover2:hover {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
-.name-hover-2:hover + .name-hover2 {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
-.name-hover3:hover {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
-.name-hover-3:hover + .name-hover3 {
-  color: #ff007f;
-  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
-}
-
 .main-section-1 {
   display: flex;
   align-items: center;
@@ -596,39 +566,6 @@ body {
   padding-right: 25px !important;
   padding-bottom: 0 !important;
   padding-left: 25px !important;
-}
-
-.back-button-container {
-  width: 100vw;
-  padding-top: 0 !important;
-  padding-right: 15px !important;
-  padding-bottom: 0 !important;
-  padding-left: 15px !important;
-  margin-top: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.GE-name {
-  font-weight: 600;
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.back-button {
-  width: 120px;
-  height: 40px;
-  font-size: 15px;
-  box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 25px #00ffff;
-  background-color: #000;
-  color: #00ffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameExperienceCollection</title>
+    <link rel="shortcut icon" href="./images/logo-no-back-alone.png" />
+    <link rel="stylesheet" href="./css/dino.css" />
+  </head>
+  <body onclick="jump()">
+    <div class="background-overlay"></div>
+    <div class="back-to-main-container">
+      <div class="logo-name">
+        <div class="logo-container">
+          <img class="logo" src="./images/logo-no-back-blue.png" alt="logo" />
+        </div>
+        <span class="name">Collection</span>
+      </div>
+      <button id="back-to-main" class="back-to-main">Main Menu</button>
+    </div>
+    <section class="game-effect">
+        <div id="position-1" class="win-lose-line position-1"></div>
+        <div id="position-2" class="win-lose-line position-2"></div>
+      <div class="game-container">
+        <div class="score-card">
+          <span>HI</span>
+          <span class="high-score"></span>
+          <span class="score"></span>
+        </div>
+        <div class="player"></div>
+
+        <div class="obstacle"></div>
+
+        <div class="restart-game">
+          <div class="content">
+            <span class="text">RESTART</span>
+            <button onclick="restart()" class="btn-reset-game"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/dino.js"></script>
+  </body>
+</html>
