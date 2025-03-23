@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent 50%);
+  animation: bg-shadow 10s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes bg-shadow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.vertical-lines{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    box-shadow: 0 0 30px 5px #00ffff;
+    background-color: #00ffff;
+    z-index: -1;
+}
+.line1{
+    top: 30%;
+}
+.line2{
+    top: 70%;
+}
+.green-line {
+    animation: green-win 1.5s ease-in-out ;
+}
+@keyframes green-win {
+  0% {
+    box-shadow: 0 0 30px 5px #00ffff;
+    background-color: #00ffff;
+  }
+  20% {
+    box-shadow: 0 0 30px 5px #30e620;
+    background-color: #30e620;
+  }
+  80% {
+    box-shadow: 0 0 30px 5px #30e620;
+    background-color: #30e620;
+  }
+  100% {
+    box-shadow: 0 0 30px 5px #00ffff;
+    background-color: #00ffff;
+  }
+}
+.back-to-main-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .logo-name {
+    display: flex;
+    align-items: center;
+  }
+  .logo-container {
+    width: 110px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+  .name {
+    color: #00ffff;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: -10px;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+      0 0 40px #00ffff, 0 0 80px #00ffff;
+  }
+  .game-name{
+    font-size: 40px;
+    margin: 20px auto 15px auto;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+      0 0 40px #00ffff, 0 0 80px #00ffff;
+  }
+  .back-to-main {
+    width: 100px;
+    height: 38px;
+    font-size: 15px;
+    margin-right: 20px;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+      0 0 20px #00ffff, 0 0 25px #00ffff;
+    background-color: #000;
+    color: #00ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .game-effect {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .button-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.puzzle-container{
+    position: relative;
+    margin: 20px auto 0 auto;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+    0 0 20px #00ffff, 0 0 25px #00ffff;
+}
+.puzzle-container .tile{
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.tile.empty{
+    background-color: rgb(53, 53, 53);
+}
+.puzzle-container .tile:hover{
+    background-color: #00ffff;
+    color: #000;
+    border: 4px solid black;
+}
+#shuffle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #000;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+    0 0 20px #00ffff, 0 0 25px #00ffff;
+    border: none;
+    transition: 0.5s;
+}
+#shuffle-btn:active{
+    background-color: #00ffff;
+    color: #000;
+}
+.message{
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+    0 0 20px #00ffff, 0 0 25px #00ffff;
+    margin:25px auto 30px auto;
+    font-size: 24px;
+}

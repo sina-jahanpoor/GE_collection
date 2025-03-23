@@ -11,9 +11,7 @@ const OBSTACLE_SIZES = ["xs", "s", "m", "l"];
 document.getElementById("back-to-main").addEventListener("click", () => {
   window.history.back();
 });
-/**
- * JUMP
- */
+
 function addJumpListener() {
   document.addEventListener("keydown", (event) => {
     if (event.key === " ") {
@@ -37,9 +35,7 @@ function jump() {
   }, 1200);
 }
 
-/**
- * COLLISION
- */
+
 let collisionInterval;
 function monitorCollision() {
   collisionInterval = setInterval(() => {
@@ -50,7 +46,7 @@ function monitorCollision() {
   }, 10);
 }
 
-// Left buffer for tail
+
 const LEFT_BUFFER = 50;
 function isCollision() {
   const playerClientRect = playerElement.getBoundingClientRect();
@@ -69,9 +65,7 @@ function isCollision() {
   return xCollision && yCollision;
 }
 
-/**
- * SCORE
- */
+
 let score = 0;
 function setScore(newScore) {
   scoreElement.innerHTML = score = newScore;
@@ -104,9 +98,6 @@ function checkForHighScore() {
   }
 }
 
-/**
- * RANDOMISE OBSTACLE
- */
 function getRandomObstacleSize() {
   const index = Math.floor(Math.random() * (OBSTACLE_SIZES.length - 1));
   return OBSTACLE_SIZES[index];
@@ -120,9 +111,7 @@ function randomiseObstacle() {
   }, 2000);
 }
 
-/**
- * STOP GAME
- */
+
 function stopGame() {
   clearInterval(collisionInterval);
   clearInterval(scoreInterval);

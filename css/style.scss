@@ -319,7 +319,7 @@ body {
   justify-content: center;
   flex-direction: column;
   @include margin(50px, 10px, 0, 10px);
-  @include padding(30px, 0, 0px, 0);
+  @include padding(30px, 10px, 0px, 10px);
   background-color: #1a1a1a;
   width: 70%;
   border-radius: 20px;
