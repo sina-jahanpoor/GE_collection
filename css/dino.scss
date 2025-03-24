@@ -153,6 +153,13 @@ body {
       background-color: #00ffff;
     }
   }
+  .game-name{
+    font-size: 40px;
+    margin: 20px auto 10px auto;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff,
+      0 0 40px #00ffff, 0 0 80px #00ffff;
+  }
 .game-container {
   width: 75%;
   aspect-ratio: 2 / 1;

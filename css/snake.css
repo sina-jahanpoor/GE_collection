@@ -145,7 +145,7 @@ body {
 
 .game-name {
   font-size: 40px;
-  margin: 20px auto 15px auto;
+  margin: 20px auto 20px auto;
   color: #00ffff;
   text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
 }
