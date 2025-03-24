@@ -4,19 +4,22 @@ let tileArray = Array.from({ length: 15 }, (_, i) => i + 1).concat();
 let emptyIndex = 15;
 let firstLine = document.getElementById("line1");
 let secondLine = document.getElementById("line2");
+let solved = false;
 function handleTileClick(index) {
   if (isAdjcent(index, emptyIndex)) {
     tileArray[emptyIndex] = tileArray[index];
     tileArray[index] = 0;
     emptyIndex = index;
     renderTiles();
-    if (isSolved()) {
+    isSolved();
+    console.log(solved);
+    if (solved) {
       document.getElementById("message").style.visibility = "visible";
       firstLine.classList.add("green-line");
       secondLine.classList.add("green-line");
       setTimeout(()=>{
-        winLoseLine1.classList.remove("green-line");
-        winLoseLine2.classList.remove("green-line");
+        firstLine.classList.remove("green-line");
+        secondLine.classList.remove("green-line");
       },1500)
     }
   }
@@ -46,14 +49,12 @@ function renderTiles() {
   });
 }
 function isSolved() {
-  for (let i = 0; i < 15; i++) {
-    if (tileArray[i] !== i + 1) {
-      return false;
-    }else{
-      return true;
+  const correctArray = Array.from({length:15},(_,i)=>i+1);
+  correctArray.push(0)
+    if( JSON.stringify(tileArray) === JSON.stringify(correctArray)){
+      solved=true;
     }
   }
-}
 function shuffleTiles() {
   let currentEmpty = emptyIndex;
   for (let i = 0; i < 1000; i++) {
@@ -68,6 +69,7 @@ function shuffleTiles() {
     tileArray[currentEmpty] = tileArray[move];
     tileArray[move] = 0;
     currentEmpty = move;
+    solved=false;
   }
   emptyIndex = currentEmpty;
   renderTiles();

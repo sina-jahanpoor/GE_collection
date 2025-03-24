@@ -1,45 +1,50 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    position: relative;
     font-family: "Arial", sans-serif;
     background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    background-size: cover;
     display: flex;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    min-height: 100vh;
     flex-direction: column;
-}
-.background-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -2;
-}
-
-.background-overlay::before {
-  content: "";
-  position: absolute;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent 50%);
-  animation: bg-shadow 10s linear infinite;
-  transform-origin: center;
-}
-
-@keyframes bg-shadow {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
   }
-}
-.horizontal-lines{
+  
+  .background-overlay::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 0, 128, 0.15), transparent 50%);
+    animation: bg-shadow 10s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes bg-shadow {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .horizontal-lines{
     position: absolute;
     left: 0;
     width: 100%;
@@ -75,7 +80,28 @@ body {
     background-color: #00ffff;
   }
 }
-.back-to-main-container {
+.red-lose {
+    animation: red-lose 1.5s ease-in-out ;
+}
+@keyframes red-lose {
+    0% {
+      box-shadow: 0 0 30px 5px #00ffff;
+      background-color: #00ffff;
+    }
+    20% {
+      box-shadow: 0 0 30px 5px #e4273d;
+      background-color: #e4273d;
+    }
+    80% {
+      box-shadow: 0 0 30px 5px #e4273d;
+      background-color: #e4273d;
+    }
+    100% {
+      box-shadow: 0 0 30px 5px #00ffff;
+      background-color: #00ffff;
+    }
+  }
+  .back-to-main-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -129,79 +155,32 @@ body {
     border-radius: 8px;
     cursor: pointer;
   }
-  .game-effect {
-    width: 100%;
-    position: relative;
+  .load-new-game{
+    background-color: #000;
+  }
+  #game-board {
+    box-shadow: 0 0 30px 5px #00ffff;
+    border: 7px solid #00ffff;
+    border-radius: 10px;
+  }
+  
+  #score-board {
+    display: flex;
+    justify-content: space-between;
+    width: 52%;
+    align-items: center;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    color: #00ffff;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
+    0 0 20px #00ffff, 0 0 25px #00ffff;
     margin-bottom: 50px;
   }
-  .button-container{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
+  #current-score {
+    color: #00ffff;
   }
-.container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-}
-.puzzle-container{
-    position: relative;
-    margin: 20px auto 0 auto;
-    width: 40%;
-    aspect-ratio: 1 / 1;
-    background-color: #000;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
-    0 0 20px #00ffff, 0 0 25px #00ffff;
-}
-.puzzle-container .tile{
-    position: absolute;
-    width: 25%;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #00ffff;
-    border: 2px solid #00ffff;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.tile.empty{
-    background-color: rgb(53, 53, 53);
-}
-.puzzle-container .tile:hover{
-    background-color: #00ffff;
-    color: #000;
-    border: 4px solid black;
-}
-#shuffle-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #00ffff;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 8px;
-    background-color: #000;
-    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
-    0 0 20px #00ffff, 0 0 25px #00ffff;
-    border: none;
-    transition: 0.5s;
-}
-#shuffle-btn:active{
-    background-color: #00ffff;
-    color: #000;
-}
-.message{
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff,
-    0 0 20px #00ffff, 0 0 25px #00ffff;
-    margin:25px auto 30px auto;
-    font-size: 24px;
-}

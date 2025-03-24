@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameExperienceCollection</title>
+    <link rel="shortcut icon" href="./images/logo-no-back-alone.png" />
+    <link rel="stylesheet" href="./css/snake.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="back-to-main-container">
+        <div class="logo-name">
+          <div class="logo-container">
+            <img class="logo" src="./images/logo-no-back-blue.png" alt="logo" />
+          </div>
+          <span class="name">Collection</span>
+        </div>
+        <button id="back-to-main" class="back-to-main">Main Menu</button>
+      </div>
+    <div class="game-effect">
+        <div id="line1" class="horizontal-lines line1"></div>
+        <div id="line2" class="horizontal-lines line2"></div>
+        <div class="load-new-game">
+          <canvas id="game-board"></canvas>
+        </div>
+    </div>
+    <div id="score-board">
+        <p id="current-score">Score: 0</p>
+        <p id="high-score">High Score: 0</p>
+      </div>
+    <script src="./js/snake.js"></script>
+</body>
+</html>
